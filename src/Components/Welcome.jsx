@@ -31,7 +31,7 @@ export default function WelcomeNotices() {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrent((prev) => (prev + 1) % notices.length);
-    }, 6000);
+    }, 3000);
     return () => clearInterval(interval);
   }, []);
 

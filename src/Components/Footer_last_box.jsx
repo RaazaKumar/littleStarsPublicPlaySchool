@@ -1,6 +1,4 @@
 import React, { useEffect, useState } from "react";
-
-// 👇 Data को बाहर define किया ताकि हर render पर नया न बने
 const slidesData = [
   {
     title: "Simultala School Entrance Preparation",
@@ -26,12 +24,12 @@ export default function Footer_last_box() {
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrent((prev) => (prev + 1) % slidesData.length);
-    }, 4000);
+    }, 3000);
     return () => clearInterval(timer);
   }, []);
 
   return (
-    <div className="w-full max-w-7xl h-[60vh] sm:h-[60vh] md:h-[65vh] mx-auto rounded-2xl shadow-lg bg-gray-100 flex justify-center items-center overflow-hidden px-2 sm:px-4">
+    <div className="w-full max-w-7xl mx-auto rounded-2xl shadow-lg bg-gray-100 flex justify-center items-center overflow-hidden px-2 sm:px-4">
       <div
         className="flex transition-transform duration-700 ease-in-out w-full"
         style={{ transform: `translateX(-${current * 100}%)` }}

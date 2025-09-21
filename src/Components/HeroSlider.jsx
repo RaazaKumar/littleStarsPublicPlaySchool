@@ -22,7 +22,7 @@ export default function HeroSlider() {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % slides.length);
-    }, 4000);
+    }, 3000);
 
     return () => clearInterval(interval);
   }, []);
@@ -38,7 +38,7 @@ export default function HeroSlider() {
   };
 
   return (
-    <section className="relative w-full h-[40vh] sm:h-[55vh] md:h-[70vh] lg:h-[85vh] overflow-hidden mt-[11.128rem] md:mt-[8rem] lg:mt-[5.128rem]">
+    <section className="relative w-full h-[40vh] sm:h-[55vh] md:h-[65vh] lg:h-[85vh] overflow-hidden mt-[11.128rem] md:mt-[8rem] lg:mt-[5.128rem]">
       {slides.map((slide, index) => (
         <div
           key={index}
